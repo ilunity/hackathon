@@ -3,12 +3,14 @@ import { Box, CssBaseline, ThemeProvider } from '@mui/material';
 import { theme } from '../../utils/theme-options';
 import backgroundImage from '../../assets/stars-bg.gif';
 import { GenerateProject } from '../GenerateProject';
+import { Logo } from '../Logo';
 
 
 export const App: React.FC = () => {
   return (
     <ThemeProvider theme={ theme }>
       <CssBaseline />
+      <Logo />
       <Box
         sx={ {
           height: '100%',

@@ -1,16 +1,16 @@
 import React from 'react';
 import { StartupThemeFormProps } from './StartupThemeForm.types';
-import { Box, Button, TextField } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { ideasService } from '../../services';
 
 export const StartupThemeForm: React.FC<StartupThemeFormProps> = ({ updateData }) => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const data = new FormData(event.currentTarget);
+    // const data = new FormData(event.currentTarget);
+    // const startupTheme = data.get('startup_theme');
 
-    const startupTheme = data.get('startup_theme');
-    const response = await ideasService.generate(startupTheme as string);
+    const response = await ideasService.generate();
 
     if (!response.ok) {
       return console.log('Status of response not in 200..299');
@@ -40,14 +40,14 @@ export const StartupThemeForm: React.FC<StartupThemeFormProps> = ({ updateData }
           marginBottom: 8,
         } }
       >
-        <TextField
-          margin='normal'
-          fullWidth
-          id='startup_theme'
-          label='Тема стартапа'
-          name='startup_theme'
-          autoFocus
-        />
+        {/*<TextField*/ }
+        {/*  margin='normal'*/ }
+        {/*  fullWidth*/ }
+        {/*  id='startup_theme'*/ }
+        {/*  label='Тема стартапа'*/ }
+        {/*  name='startup_theme'*/ }
+        {/*  autoFocus*/ }
+        {/*/>*/ }
         <Button
           type={ 'submit' }
           fullWidth
