@@ -1,12 +1,7 @@
 import { createTheme, ThemeOptions } from '@mui/material';
 
 export const themeOptions: ThemeOptions = {
-  // typography: {
-  //   fontFamily: [
-  //     'CozetteVector',
-  //   ].join(','),
-  // },
-  palette: { mode: 'dark' },
+  palette: { mode: 'light' },
 };
 
 export const theme = createTheme(themeOptions);
