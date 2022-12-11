@@ -10,37 +10,50 @@ export const StartupDescription: React.FC<StartupDescriptionProps> = ({
   return (
     <>
       <Typography
-        variant={ 'h6' }
+        variant={ 'h4' }
         component={ 'h3' }
         pl={ 2 }
+        mb={ 1 }
       >
         Описание стратапа
       </Typography>
       <Typography
         p={ 2 }
         mb={ 4 }
-        variant={ 'body1' }
+        variant={ 'h6' }
       >
         { description }
       </Typography>
-      <Table>
+      <Table
+        sx={ {
+          mt: 'auto',
+        } }
+      >
         <TableHead>
           <TableRow>
             <TableCell>
-              Необходимое количество сотрудников
+              <Typography variant={ 'h6' } paragraph sx={ { m: 0 } }>
+                Необходимое количество сотрудников
+              </Typography>
             </TableCell>
             <TableCell align='right'>
-              Вероятные вложения в проект
+              <Typography variant={ 'h6' } paragraph sx={ { m: 0 } }>
+                Вероятные вложения в проект
+              </Typography>
             </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           <TableRow>
             <TableCell>
-              { employerNumbers }
+              <Typography variant={ 'body1' } paragraph sx={ { m: 0 } }>
+                { employerNumbers }
+              </Typography>
             </TableCell>
             <TableCell align='right'>
-              { investments }
+              <Typography variant={ 'body1' } paragraph sx={ { m: 0 } }>
+                { investments }
+              </Typography>
             </TableCell>
           </TableRow>
         </TableBody>
